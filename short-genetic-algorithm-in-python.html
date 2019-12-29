@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Short genetic algorithm in Python</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Minimind Atom Feed" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Minimind </a></h1>
+                <nav><ul>
+                    <li><a href="/category/artificial-intelligence.html">Artificial Intelligence</a></li>
+                    <li><a href="/category/javascript.html">Javascript</a></li>
+                    <li class="active"><a href="/category/python.html">Python</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/short-genetic-algorithm-in-python.html" rel="bookmark"
+           title="Permalink to Short genetic algorithm in Python">Short genetic algorithm in Python</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-03-31T07:21:00+01:00">
+                Published: Sun 31 March 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/ian-macinnes.html">Ian Macinnes</a>
+        </address>
+<p>In <a href="/category/python.html">Python</a>.</p>
+
+</footer><!-- /.post-info -->      <p><link rel="stylesheet" href="/css/veryshortgapost.css" type="text/css" media="screen">
+<p>Here is a <a href="https://github.com/minimind/verySimpleGeneticAlgorithm" target="_blank">very short genetic algorithm</a>
+using rank selection written in Python. It's an exercise to help myself write concise Python.</p>
+<p>We were told to write a genetic algorithm when on the 
+<a href="http://www.sussex.ac.uk/easy/" target="_blank">Evolutionary and Adaptive Systems</a>
+M.Sc. course at Sussex in our first term back in 2000. During this course and my following DPhil, I wrote lots of
+different variations but none as short.</p></p>
+<p>It has abstract genotypes which means the mutation operators etc. are completely changable.<p>
+<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">bisect</span>
+
+<span class="c"># These can be replaced to produce different populations to suit</span>
+
+<span class="k">def</span> <span class="nf">initialise_genotypes</span><span class="p">():</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">trial</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="o">-</span><span class="n">i</span>
+
+<span class="c">##################################################</span>
+
+<span class="k">def</span> <span class="nf">run_trials</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">trial_fn</span><span class="p">):</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="p">[(</span><span class="n">trial_fn</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">population</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">create_next_population</span><span class="p">(</span><span class="n">population_with_fitness</span><span class="p">,</span> <span class="n">mutate_fn</span><span class="p">):</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">population_with_fitness</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">k</span> <span class="p">:</span> <span class="p">(</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">sorted_population</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">population_with_fitness</span><span class="p">]</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">rank_selection</span> <span class="o">=</span> <span class="p">[]</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">max_relative_fitness</span> <span class="o">=</span> <span class="mi">0</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sorted_population</span><span class="p">)):</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">max_relative_fitness</span> <span class="o">+=</span> <span class="n">j</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">rank_selection</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">max_relative_fitness</span><span class="p">)</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">new_population</span> <span class="o">=</span> <span class="p">[]</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sorted_population</span><span class="p">)):</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">j</span> <span class="o">=</span> <span class="n">bisect</span><span class="o">.</span><span class="n">bisect</span><span class="p">(</span><span class="n">rank_selection</span><span class="p">,</span> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="n">max_relative_fitness</span><span class="p">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">mutated_member</span> <span class="o">=</span> <span class="n">mutate_fn</span><span class="p">(</span><span class="n">sorted_population</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">new_population</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mutated_member</span><span class="p">)</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="n">new_population</span>
+
+<span class="k">def</span> <span class="nf">start_evolving</span><span class="p">(</span><span class="n">initialise_genotypes_fn</span><span class="p">,</span> <span class="n">mutate_fn</span><span class="p">,</span> <span class="n">trial_fn</span><span class="p">):</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">population</span> <span class="o">=</span> <span class="n">initialise_genotypes_fn</span><span class="p">()</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span> <span class="c"># 1000 generations</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">population_with_fitness</span> <span class="o">=</span> <span class="n">run_trials</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">trial_fn</span><span class="p">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">population</span> <span class="o">=</span> <span class="n">create_next_population</span><span class="p">(</span><span class="n">population_with_fitness</span><span class="p">,</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">mutate_fn</span><span class="p">)</span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">population</span><span class="p">:</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">print</span> <span class="n">i</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">start_evolving</span><span class="p">(</span><span class="n">initialise_genotypes</span><span class="p">,</span> <span class="n">mutate</span><span class="p">,</span> <span class="n">trial</span><span class="p">)</span>
+</pre></div>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

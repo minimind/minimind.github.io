@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Minimind - Artificial Intelligence</title><link href="/" rel="alternate"></link><link href="/feeds/artificial-intelligence.atom.xml" rel="self"></link><id>/</id><updated>2014-04-02T10:06:00+01:00</updated><entry><title>A robot with evolved morphology and controller</title><link href="/a-robot-with-evolved-morphology-and-controller.html" rel="alternate"></link><published>2014-04-02T10:06:00+01:00</published><updated>2014-04-02T10:06:00+01:00</updated><author><name>Ian Macinnes</name></author><id>tag:None,2014-04-02:/a-robot-with-evolved-morphology-and-controller.html</id><summary type="html">&lt;p&gt;My doctorate back in 2006 was partly research on evolving the morphologies of
+robots and controllers in simulation and then constructing them. Most of the robots
+are now lost but today I discovered these movies of a single example.&lt;/p&gt;
+
+&lt;p&gt;The fitness function of the population of robots was simply to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;My doctorate back in 2006 was partly research on evolving the morphologies of
+robots and controllers in simulation and then constructing them. Most of the robots
+are now lost but today I discovered these movies of a single example.&lt;/p&gt;
+
+&lt;p&gt;The fitness function of the population of robots was simply to move.
+The population size was 30. The robot uses a continuous time recurrent neural network as a controller, co-evolved
+with the morphology over 1000 generations. This was the fittest agent from the final generation:&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width="420" height="315" src="//www.youtube.com/embed/ZTLnDFlsDiw?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the agent after it was physically constructed:&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width="420" height="315" src="//www.youtube.com/embed/ztQFTryLq5A?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;An interesting aspect is the curved arms that were evolved to allow the robot to
+roll over, then roll back.&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>Acroban the Humanoid</title><link href="/acroban-the-humanoid.html" rel="alternate"></link><published>2010-08-13T18:34:00+01:00</published><updated>2010-08-13T18:34:00+01:00</updated><author><name>Ian Macinnes</name></author><id>tag:None,2010-08-13:/acroban-the-humanoid.html</id><summary type="html">&lt;p&gt;This is an interesting robot from &lt;a title="Inria Flowers home page" href="http://flowers.inria.fr/index.php" target="_blank"&gt;Inria Flowers&lt;/a&gt;
+that was showcased at the ACM SIGGRAPH Conference that's just finished. The robot has a fixed rather than random morphology but it is a
+very nice example of a real physical robot with two legs and a torso being able to balance …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is an interesting robot from &lt;a title="Inria Flowers home page" href="http://flowers.inria.fr/index.php" target="_blank"&gt;Inria Flowers&lt;/a&gt;
+that was showcased at the ACM SIGGRAPH Conference that's just finished. The robot has a fixed rather than random morphology but it is a
+very nice example of a real physical robot with two legs and a torso being able to balance in the face of perturbations.&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/zHbl-ozA_h0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Although it can balance itself in the face of minor knocks and shakes, it doesn't walk like a human. A walking human
+keeps moving their centre of gravity forward so one foot has to be placed ahead to stop the body falling. In fact, human walking
+has been described as controlled falling. Acroban appears to be careful to keep its centre of gravity above support points (i.e. its feet)
+so it won't tip over. This is why is moves so slowly. Still a very nice robot though! Anything that tall that's constantly
+moving that can balance itself is a tremendous achievement.&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>Virtual creatures gallery 3 of 10</title><link href="/virtual-creatures-gallery-3-of-10.html" rel="alternate"></link><published>2010-08-12T16:34:00+01:00</published><updated>2010-08-12T16:34:00+01:00</updated><author><name>Ian Macinnes</name></author><id>tag:None,2010-08-12:/virtual-creatures-gallery-3-of-10.html</id><summary type="html">&lt;p&gt;This is another post in an occasional series of other peoples'
+videos of evolved virtual creatures.
+&lt;a title="Stellar Alchemy home page" href="http://www.stellaralchemy.com/lee/index.php" target="_blank"&gt;Lee Graham of Stellar Alchemy&lt;/a&gt; has
+produced great &lt;a title="Virtual creature video at YouTube" href="http://www.youtube.com/watch?v=GqHybJaBXYI" target="_self"&gt;virtual&lt;/a&gt;
+&lt;a title="Virtual creature video at YouTube" href="http://www.youtube.com/watch?v=QPEjzxjxXoM" target="_self"&gt;creatures&lt;/a&gt;, some of which
+move beautifully. He keeps a &lt;a title="Zoo of virtual creatures at Stella Alchemy" href="http://www.stellaralchemy.com/lee/vce3d_favorites.php"
+target="_self"&gt;zoo of the best&lt;/a&gt; that people have sent in using his software. I especially like the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another post in an occasional series of other peoples'
+videos of evolved virtual creatures.
+&lt;a title="Stellar Alchemy home page" href="http://www.stellaralchemy.com/lee/index.php" target="_blank"&gt;Lee Graham of Stellar Alchemy&lt;/a&gt; has
+produced great &lt;a title="Virtual creature video at YouTube" href="http://www.youtube.com/watch?v=GqHybJaBXYI" target="_self"&gt;virtual&lt;/a&gt;
+&lt;a title="Virtual creature video at YouTube" href="http://www.youtube.com/watch?v=QPEjzxjxXoM" target="_self"&gt;creatures&lt;/a&gt;, some of which
+move beautifully. He keeps a &lt;a title="Zoo of virtual creatures at Stella Alchemy" href="http://www.stellaralchemy.com/lee/vce3d_favorites.php"
+target="_self"&gt;zoo of the best&lt;/a&gt; that people have sent in using his software. I especially like the movement of some of these and also the
+music playing, since normally virtual creature videos are deathly silent. This is my favourite.&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/lhZthzFLams" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>The behaviour-based robotics revolution</title><link href="/the-behaviour-based-robotics-revolution.html" rel="alternate"></link><published>2010-08-11T10:24:00+01:00</published><updated>2010-08-11T10:24:00+01:00</updated><author><name>Ian Macinnes</name></author><id>tag:None,2010-08-11:/the-behaviour-based-robotics-revolution.html</id><summary type="html">&lt;p&gt;I mentioned Rodney Brooks in an earlier post so I though I'd briefly write a profile of Brooks and the behaviour-based robotics revolution he
+helped start at the beginning of the 1990's. Rodney Brooks is an Austrialian who, after a series of insightful and highly influential
+papers, eventually ascended to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I mentioned Rodney Brooks in an earlier post so I though I'd briefly write a profile of Brooks and the behaviour-based robotics revolution he
+helped start at the beginning of the 1990's. Rodney Brooks is an Austrialian who, after a series of insightful and highly influential
+papers, eventually ascended to head the &lt;a title="Artificial Intelligence Laboratory at MIT home page" href="http://www.csail.mit.edu" target="_blank"&gt;Artificial Intelligence Laboratory at MIT&lt;/a&gt; from 2003 to 2007. He brought various issues into the mainstream of the field, but I&amp;#8217;ll discuss functional and behavioural decomposition here, rather than his fascinating arguments for &lt;a title="The distinction between being situated and being embodied" href="http://www.evolvingmorphologies.com/?p=11" target="_self"&gt;embodiment and situatedness&lt;/a&gt; (incidentally, the importance of which he had in fact &lt;em&gt;re&lt;/em&gt;discovered, as they had been discussed, among others, by members of the cybernetics movement way back in the 1950&amp;#8242;s).&lt;/p&gt;
+
+&lt;p&gt;Brooks tried to construct robots that could successfully operate in the noisy, complicated everyday world but he found he couldn't.
+Most robots then, as now, are designed to operate in simplified environments so that the robot can respond to clear and unambiguous environmental
+cues. These robots would expect objects to be placed in the same locations time after time, or read large clear black text on a white background.
+These simple, structured environments were no match for the real world and the robots designed to operate in them couldn't operate when placed
+in a house, or a street with a rough pavement and varying street lighting. This problem caused Brooks to draw a conclusion that proved to be
+controversial within the field of artificial intelligence; that the mainstream symbolic approach was wrong.&lt;/p&gt;
+
+&lt;p&gt;From the 1950's onwards (really ever since the
+&lt;a title="Dartmouth Conference of 1956 at Wikipedia" href="http://en.wikipedia.org/wiki/Dartmouth_conference" target="_blank"&gt;Dartmouth Conference of 1956&lt;/a&gt;
+), the mainstream approach to artificial intelligence was to represent the world as &lt;em&gt;propositions&lt;/em&gt; that could be manipulated. Propositions
+are data items or symbols that  represent facts, objects in the environment, or abstract attributes. The propositions would be logically manipulated
+using one of a variety of algorithms to solve a specific problem. Eventually, in order to apply any of the common methodologies and tools used by
+artificial intelligence researchers such as Lisp, Prolog, or expert systems, the given problem had to be broken down as propositions, then
+manipulated using a system of logical rules, then the answer would be presented as another list of propositions. This methodology is called
+&lt;em&gt;functional decomposition&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;By the beginning of the eighties, the symbolic approach started to look shaky. Hubert Dreyfus criticized the approach on philosophical
+grounds, whereas John Searle's Chinese Room argument and Joseph Weizenbaum's computer program Eliza highlighted grave drawbacks
+in the symbolic approach. Their arguments were broadly pointedly ignored within the artificial intelligence field.&lt;/p&gt;
+
+&lt;p&gt;At the end of the eighties, Brooks criticised functional decomposition as a means to design the control system of a robot. If you were to
+functionally decompose a desired behaviour, you would divide the behaviour into individual functional tasks, such as pattern recognition,
+language processing, and abstract reasoning. You would then treat each task as an individual problem to be solved. However, it is not at all
+clear that tasks or behaviours are separated in this way in organisms. Evolution tends to produce highly integrated solutions that are not
+easy to to decompose in the way a software engineering task may be.&lt;/p&gt;
+
+&lt;p&gt;So instead of using functional decomposition, Brooks urged the use of &lt;em&gt;behavioural decomposition&lt;/em&gt;. This approach breaks up behaviours
+into a series of local actions. He suggested that modules that implement specific actions be triggered by specific cues. If a behaviour comes
+from separate but cooperating actions responding to  local cues, it means that a robot doesn't need a central planning unit  to decide
+what to do next. The overall behaviour of the robot emerges  from the local decisions made by various parts distributed about the  body of the
+robot. This approach is bottom-up rather that top-down, the  very opposite of the functional decomposition method.&lt;/p&gt;
+
+&lt;p&gt;Brooks also suggested that every action should first be tested on the real robot placed in its operating environment to ensure that all the
+actions work. Only once all the actions have been "debugged" should they be coordinated to compose more complex behaviours. The
+robot should be repeatedly debugged until it performed the desired behaviours successfully. A real robot should be used rather than a simulation
+since the real world (including the physical dynamics of the robot) is very hard to model, and really "the world acts as its own best
+model". This means that instead of the robot responding to events that occur or are predicted to occur in a &lt;em&gt;model&lt;/em&gt; of the
+environment, it would respond directly to an event in the &lt;em&gt;real&lt;/em&gt; environment.&lt;/p&gt;
+
+&lt;p&gt;How has his ideas influenced evolved virtual creatures or evolutionary robotics? Well, an awful lot. Although he himself doesn't think
+that evolved neural networks are the best technique to use, actually a robot controlled by a neural controller matches very closely his ideas
+of individual actions triggered by specific cues. Such a robot is definitely behaviour-based. But most evolved robots are evolved in
+simulation, not, as Brooks advocated, tested in the real world. The problem he has identified remains the biggest problem in evolved
+morphology robots - how to transfer robots across the reality gap from simulation to the real physical world.&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>Virtual creatures gallery 2 of 10</title><link href="/virtual-creatures-gallery-2-of-10.html" rel="alternate"></link><published>2010-08-10T10:24:00+01:00</published><updated>2010-08-10T10:24:00+01:00</updated><author><name>Ian Macinnes</name></author><id>tag:None,2010-08-10:/virtual-creatures-gallery-2-of-10.html</id><summary type="html">&lt;p&gt;This is another post in an occasional series of other peoples&amp;' videos&lt;/a&gt; of evolved virtual creatures. I like these evolved
+creatures by the &lt;a title="Evolution of Robotic Organisms home page" href="http://ero.matfyz.cz/" target="_blank"&gt;ERO&lt;/a&gt; group
+(Evolution of Robotic Organisms). The swimming agents especially are wonderful!&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/0_8tNGKm87U" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;The methodology is kept very close to that of Sims (e.g. same transfer functions …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is another post in an occasional series of other peoples&amp;' videos&lt;/a&gt; of evolved virtual creatures. I like these evolved
+creatures by the &lt;a title="Evolution of Robotic Organisms home page" href="http://ero.matfyz.cz/" target="_blank"&gt;ERO&lt;/a&gt; group
+(Evolution of Robotic Organisms). The swimming agents especially are wonderful!&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/0_8tNGKm87U" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;The methodology is kept very close to that of Sims (e.g. same transfer functions such as abs, atan, cos, sigmoid, etc.) but
+the most recent work applies the
+&lt;a title="PDF of technical paper &amp;quot;Towards Efficient Evolutionary Design of Autonomous Robots&amp;quot;"
+href="http://artax.karlin.mff.cuni.cz/~krcap1am/ero/doc/krcah49.pdf" target="_blank"&gt;NEAT crossover operator&lt;/a&gt; that allows
+speciation within a population.&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>The difference between being situated and being embodied</title><link href="/the-difference-between-being-situated-and-being-embodied.html" rel="alternate"></link><published>2010-08-09T11:56:00+01:00</published><updated>2010-08-09T11:56:00+01:00</updated><author><name>Ian Macinnes</name></author><id>tag:None,2010-08-09:/the-difference-between-being-situated-and-being-embodied.html</id><summary type="html">&lt;p&gt;After discussing robots with a fellow artificial lifer, I can see confusion between two attributes of the physical existence of a robot or
+organism. I want to clarify my definitions, at least to see if my use is compatible with others. These terms are &lt;em&gt;situatedness&lt;/em&gt; and
+&lt;em&gt;embodiment&lt;/em&gt;. A physical agent …&lt;/p&gt;</summary><content type="html">&lt;p&gt;After discussing robots with a fellow artificial lifer, I can see confusion between two attributes of the physical existence of a robot or
+organism. I want to clarify my definitions, at least to see if my use is compatible with others. These terms are &lt;em&gt;situatedness&lt;/em&gt; and
+&lt;em&gt;embodiment&lt;/em&gt;. A physical agent acting in the world is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;situated&lt;/strong&gt; such that the relationships between the  robot and the elements in its environment have a spatial and temporal
+quality that varies as the robot moves; and&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;embodied&lt;/strong&gt; such that the body of a robot has its own physical dynamics.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Many of the problems tackled  by behaviour-based robotics use robots that react with objects that are spatially  located in the environment
+(as opposed to symbolic objects or objects detected using magic sensors), and hence the robots are &lt;em&gt;situated&lt;/em&gt;. Including a
+spatial element in the  relationship between the robot and   the object provides the robot with  feedback information that may be   complicated
+to derive with a  non-situated controller. For example, a   phototactic robot is provided  with immediate feedback regarding its   orientation
+from the varying  strength of the signals that are produced by its   sensors as the robot rotates.&lt;/p&gt;
+
+&lt;p&gt;But the controller of a real robot interacts with the environment through its body, and this body can have complex physical dynamics i.e.
+it is also &lt;em&gt;embodied&lt;/em&gt;. If a robot is embodied, then it is very likely situated. Most simulated robots or animats are situated to some
+degree, but they are not often embodied, especially with the very simple robots we use in artificial life experiments. This is because embodiment
+refers to the physical existence of a robot or  organism, and it is more difficult to model the embodiment of a simulated robot than its
+situatedness. If fact, sometimes the robot effectively has almost zero embodiment, but is only represented as little more than a position,
+a radius, and an acceleration of movement.&lt;/p&gt;
+
+&lt;p&gt;Why is the distinction important?
+&lt;a title="Rodney Brooks's home page" href="http://people.csail.mit.edu/brooks/" target="_blank"&gt;Rodney Brooks&lt;/a&gt;
+believes that acknowledging embodiment is important because it encourages the robot's builder to
+&lt;a title="PDF of Intelligence Without Representation by Rodney Brooks" href="http://people.csail.mit.edu/brooks/papers/representation.pdf" target="_blank"&gt;
+continually test and correct&lt;/a&gt; the    robot's behaviour physically in the real world, a process that he compares with software debugging.
+This debugging process must take place    on a real robot rather than a simulated or modelled robot because of    the difficulty of transferring
+behaviours from simulation to reality.    Brooks also believes that debugging a real robot can reveal that some    problems which are difficult to
+solve when considered in abstraction  do   not exist when a robot is physically constructed.&lt;/p&gt;
+
+&lt;p&gt;For evolved robots that are to "cross the reality gap" to the real  world, it is essential we develop methodologies to model
+a robot's  embodiment in such a way to make its behaviour transferable. The principle methodology we use is called minimal simulations,
+which was first developed by Nick Jakobi in the mid nineties. This shall be the subject of a future post.&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>Virtual creatures gallery 1 of 10</title><link href="/virtual-creatures-gallery-1-of-10.html" rel="alternate"></link><published>2010-08-08T13:09:00+01:00</published><updated>2010-08-08T13:09:00+01:00</updated><author><name>Ian Macinnes</name></author><id>tag:None,2010-08-08:/virtual-creatures-gallery-1-of-10.html</id><summary type="html">&lt;p&gt;I'm collecting videos of animats whose morphology and controllers have been evolved in order to improve my own video (and animat)
+making ability. I'm looking for good visual designs and agents that &lt;em&gt;move&lt;/em&gt; naturally, even though they may not have a very lifelike
+body shape. I'll start with the granddaddy …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'm collecting videos of animats whose morphology and controllers have been evolved in order to improve my own video (and animat)
+making ability. I'm looking for good visual designs and agents that &lt;em&gt;move&lt;/em&gt; naturally, even though they may not have a very lifelike
+body shape. I'll start with the granddaddy of them all - virtual creatures created by
+&lt;a title="Karls Sims' home page" href="http://www.karlsims.com/" target="_blank"&gt;Karl Sims&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/JBgG_VSP7f8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;These were the first virtual creatures developed, way back in 1994 and I suspect still the most visually striking. They use a simple
+&lt;a title="PDF of technical paper &amp;quot;Evolving Virtual Creatures&amp;quot;" href="http://www.karlsims.com/papers/siggraph94.pdf" target="_blank"&gt;
+developmental algorithm for the morphology and a unique controller&lt;/a&gt;, a hybrid of neural network and various functions to generate different
+activation patterns that are used to control the body.&lt;/p&gt;
+
+&lt;p&gt;He also evolved creatures to &lt;a title="PDF of technical paper &amp;quot;Evolving 3D Morphology and Behavior by Competition&amp;quot;"
+href="http://www.karlsims.com/papers/alife94.pdf" target="_blank"&gt;compete against each other&lt;/a&gt;. The agents do not have much in the way of
+sensors and so this was really a different evolutionary pressure for movement rather than coordinating perceptual and action.&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry></feed>
