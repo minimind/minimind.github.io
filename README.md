@@ -15,3 +15,4 @@ The site is at:
 
     https://minimind.github.io
 
+--ignore-cache
