@@ -15,4 +15,7 @@ The site is at:
 
     https://minimind.github.io
 
---ignore-cache
+Currently use the attila theme:
+
+    https://github.com/arulrajnet/attila
+

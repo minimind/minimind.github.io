@@ -33,3 +33,6 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 STATIC_PATHS = ['images', 'js', 'css']
+THEME='attila'
+HOME_COVER='images/cover.jpg'
+
