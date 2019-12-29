@@ -20,7 +20,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Morphologies, Motion, and Cognition', 'http://www.motionandcognition.com/'),
+LINKS = (('Motion and Cognition', 'http://www.motionandcognition.com/'),
          ('Github page', 'https://github.com/minimind'),)
 
 # Social widget

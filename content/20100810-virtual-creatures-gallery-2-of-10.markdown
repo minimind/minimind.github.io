@@ -2,6 +2,7 @@ category: Artificial Intelligence
 date: 2010/08/10 10:24:00
 title: Virtual creatures gallery 2 of 10
 author: Ian Macinnes
+summary: This is another post in an occasional series of other peoples' videos of evolved virtual creatures. I like these evolved creatures by the ERO group (Evolution of Robotic Organisms). The swimming agents especially are wonderful!
 
 <p>This is another post in an occasional series of other peoples&' videos</a> of evolved virtual creatures. I like these evolved
 creatures by the <a title="Evolution of Robotic Organisms home page" href="http://ero.matfyz.cz/" target="_blank">ERO</a> group
