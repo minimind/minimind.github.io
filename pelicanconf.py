@@ -34,5 +34,5 @@ DEFAULT_PAGINATION = 10
 
 STATIC_PATHS = ['images', 'js', 'css']
 THEME='attila'
-HOME_COVER='images/cover.jpg'
+HOME_COVER='images/DSC01544.JPG'
 
